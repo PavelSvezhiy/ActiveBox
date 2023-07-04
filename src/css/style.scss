@@ -366,8 +366,11 @@
         width: 100%;
         height: 100%;
         background: rgba(255, 67, 67, 0.80);
-        padding: 30% 0 37%;
-        text-align: center;
+        display: flex;
+        flex-direction: column;
+        justify-content: center;
+        align-items: center;
+        // text-align: center;
 
         &:hover {
             opacity: 1;
@@ -430,6 +433,7 @@
 
     &__img_wrap {
         margin-bottom: 30px;
+        aspect-ratio: 1;
 
         @media (max-width: 1024px) {
             margin-bottom: 27px;
@@ -502,6 +506,8 @@
         justify-content: flex-start;
         column-gap: 5px;
         list-style: none;
+        flex-grow: 1;
+        align-items: end;
     }
 
     &__media_link {
@@ -520,10 +526,10 @@
 
     &__media_link:hover {
         border: 1px solid #FF4343;
+        path {
+            fill: #FF4343;
+        }
     }
 
-    &__media_link path:hover {
-        fill: #FF4343;
-    }
 }
 
