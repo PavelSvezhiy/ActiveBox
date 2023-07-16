@@ -21,11 +21,13 @@
 
     &:hover {
         background: #E71414;
+        transition: all 0.3s linear;
     }
 
     &:active {
         background: #FF4343;
         box-shadow: 4px 4px 30px 0px #FF4343;
+        transition: all 0.3s linear;
     }
 }
 
@@ -112,6 +114,7 @@
         text-align: center;
         position: relative;
         color: #eee;
+        
 
         @media (max-width: 1024px) {
             min-width: 112px;
@@ -130,6 +133,7 @@
 
         &:active {
             color: #E71414;
+            transition: all 0.3s linear;
 
             &::after {
                 content: '';
@@ -140,6 +144,7 @@
                 background-color: #E71414 ;
                 top: 59px;
                 left: 0;
+                transition: all 0.3s linear;
             }
         }
 
@@ -240,7 +245,7 @@
         }
 
         @media (max-width: 767px) {
-            max-width: 280px;
+            max-width: 100%;
         }
     }
 
@@ -374,7 +379,13 @@
 
         &:hover {
             opacity: 1;
-        }    
+            transition: all 0.3s linear;
+        }
+        
+        &:active {
+            background: rgba(185, 12, 12, 0.80);
+            transition: all 0.3s linear;
+        }
 
         &_title {
             color: #FFF;
@@ -440,12 +451,11 @@
 }
 
 .teammate {
-    display: flex;
-    flex-direction: column;
 
     &__img_wrap {
         margin-bottom: 30px;
         aspect-ratio: 1;
+        display: flex;
 
         @media (max-width: 1024px) {
             margin-bottom: 27px;
@@ -554,8 +564,8 @@
     }
 
     &__img_wrap {
-        aspect-ratio: 1 / 0.66;
         display: flex;
+        aspect-ratio: 1/ 0.66;
     }
 
     &__img {
@@ -636,7 +646,8 @@
 }
 
 .mySwiper {
-    margin-bottom: 177px;
+    margin-bottom: 132px;
+    padding-bottom: 31px;
 
     @media (max-width: 1024px) {
         margin-bottom: 127px;
@@ -658,13 +669,6 @@
         margin-bottom: 45px;
     }
 
-
-    &__wrap {
-        display: flex;
-        flex-direction: column;
-        align-items: center;
-        justify-content: center;
-    }
 
     &__title {
         color: #000;
@@ -719,7 +723,7 @@
         }
 
         @media (max-width: 767px) {
-            max-width: 280px;
+            max-width: 100%;
         }
     }
 }
@@ -876,7 +880,6 @@
         font-weight: 400;
         line-height: 21px;
         text-transform: capitalize;
-        max-width: 370px;
 
         @media (max-width: 1024px) {
             font-size: 14px;
