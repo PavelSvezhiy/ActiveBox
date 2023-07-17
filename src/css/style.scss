@@ -569,6 +569,10 @@
         display: flex;
         // aspect-ratio: 1/ 0.66;
         position: relative;
+        
+        @media (max-width: 767px) {
+            aspect-ratio: 1/ 0.66;
+        }
     }
 
     &__img {
