@@ -451,6 +451,8 @@
 }
 
 .teammate {
+    display: flex;
+    flex-direction: column;
 
     &__img_wrap {
         margin-bottom: 30px;
