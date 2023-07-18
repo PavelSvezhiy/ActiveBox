@@ -18,16 +18,15 @@
     max-width: 370px;
     width: 100%;
     margin: 0 auto;
+    transition: all 0.3s linear;
 
     &:hover {
         background: #E71414;
-        transition: all 0.3s linear;
     }
 
     &:active {
         background: #FF4343;
         box-shadow: 4px 4px 30px 0px #FF4343;
-        transition: all 0.3s linear;
     }
 }
 
@@ -114,26 +113,31 @@
         text-align: center;
         position: relative;
         color: #eee;
+        transition: all 0.3s linear;
         
 
         @media (max-width: 1024px) {
             min-width: 112px;
         }
 
-        &:hover::after {
+        &::after {
             content: '';
             display: block;
             position: absolute;
-            width: 100%;
+            width: 0%;
             height: 3px;
             background-color: #BABBC5 ;
             top: 59px;
             left: 0;
+            transition: all 0.3s linear;
+        }
+
+        &:hover::after {
+            width: 100%;
         }
 
         &:active {
             color: #E71414;
-            transition: all 0.3s linear;
 
             &::after {
                 content: '';
@@ -376,15 +380,14 @@
         flex-direction: column;
         justify-content: center;
         align-items: center;
+        transition: all 0.3s linear;
 
         &:hover {
             opacity: 1;
-            transition: all 0.3s linear;
         }
         
         &:active {
             background: rgba(185, 12, 12, 0.80);
-            transition: all 0.3s linear;
         }
 
         &_title {
@@ -541,6 +544,7 @@
         align-items: center;
         justify-content: center;
         border: 1px solid #C6CBCD;
+        transition: all 0.3s linear;
 
         @media (max-width: 1024px) {
             width: 33px;
@@ -552,6 +556,14 @@
         border: 1px solid #FF4343;
         path {
             fill: #FF4343;
+        }
+
+    }
+
+    &__media_link:active {
+        border: 1px solid #8f9ee9;
+        path {
+            fill: #8f9ee9;
         }
     }
 
@@ -567,7 +579,6 @@
 
     &__img_wrap {
         display: flex;
-        // aspect-ratio: 1/ 0.66;
         position: relative;
         
         @media (max-width: 767px) {
@@ -586,22 +597,20 @@
 
     &__info {
         background: #5C3249;
-        padding: 133px 0 122px;
-        display: grid;
-        justify-content: center;
+        padding: 116px 170px 116px 129px;
+        // display: grid;
+        // justify-content: center;
 
-        // @media (max-width: 1440px) {
-        //     padding-top: 100px;
-        //     padding-left: 100px;
-        // }
+        @media (max-width: 1440px) {
+            padding: 55px 90px 100px 100px;
+        }
 
-        // @media (max-width: 1200px) {
-        //     padding-top: 80px;
-        //     padding-left: 80px;
-        // }
+        @media (max-width: 1228px) {
+            padding: 80px 90px 100px 80px;
+        }
 
         @media (max-width: 1024px) {
-            padding: 61px 0 113px;
+            padding: 47px 104px 110px 88px;
         }
 
         @media (max-width: 767px) {
@@ -610,7 +619,6 @@
         }
 
         &_text {
-            max-width: 471px;
             color: #FFF;
             font-family: Cardo sans-serif;
             font-size: 36px;
@@ -620,8 +628,11 @@
             text-transform: capitalize;
             margin-bottom: 24px;
 
+            @media (max-width: 1228px) {
+                font-size: 30px;
+            }
+
             @media (max-width: 1024px) {
-                max-width: 330px;
                 font-size: 24px;
                 line-height: 32px;
                 margin-bottom: 16px;
@@ -642,6 +653,10 @@
             font-weight: 700;
             line-height: 15px;
             text-transform: uppercase;
+
+            @media (max-width: 1228px) {
+                font-size: 12px;
+            }
 
             @media (max-width: 1024px) {
                 font-size: 12px;
@@ -667,6 +682,16 @@
     @media (max-width: 767px) {
         margin-bottom: 86px;
     }
+}
+
+.swiper-pagination-bullet {
+    border: 1px solid #7E5D6F;
+    background: transparent;
+    opacity: 1;
+}
+
+.swiper-pagination-bullet-active {
+    background: #7E5D6F;
 }
 
 .action {
@@ -837,6 +862,7 @@
         align-items: center;
         justify-content: center;
         border: 1px solid #C6CBCD;
+        transition: all 0.3s linear;
 
         @media (max-width: 1024px) {
             width: 33px;
@@ -863,6 +889,13 @@
         border: 1px solid #FF4343;
         path {
             fill: #FF4343;
+        }
+    }
+
+    &__media_link:active {
+        border: 1px solid #8f9ee9;
+        path {
+            fill: #8f9ee9;
         }
     }
 
