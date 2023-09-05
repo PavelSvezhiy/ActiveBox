@@ -18,7 +18,7 @@
     max-width: 370px;
     width: 100%;
     margin: 0 auto;
-    transition: all 0.3s linear;
+        
 
     &:hover {
         background: #E71414;
@@ -113,7 +113,7 @@
         text-align: center;
         position: relative;
         color: #eee;
-        transition: all 0.3s linear;
+        transition: all 0.1s linear;
         
 
         @media (max-width: 1024px) {
